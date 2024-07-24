@@ -30,7 +30,7 @@
         <button type="submit" class="btn btn-primary w-100 py-8 fs-4  rounded-2">Login</button>
         <hr>
         <div class="text-center">
-            <a href="{{ url('google-login') }}" class="btn btn-primary w-50 py-1 fs-4 mb-4 rounded-2"><small>Login with</small> Google</a>
+            <a href="{{ url('google-login') }}" class="btn btn-outline-dark w-50 py-1 fs-4 mb-4 rounded-2"><small>Login with</small> Google</a>
         </div>
         {{-- <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a> --}}
         <div class="d-flex align-items-center justify-content-center">

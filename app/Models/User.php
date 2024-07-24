@@ -17,6 +17,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    
+     protected $primaryKey = 'id_user';
     protected $fillable = [
         'name',
         'email',
@@ -43,4 +45,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+
+    public function pesertaDidik()
+    {
+        return $this->hasOne(PesertaDidik::class, 'user_id');
+    }
+
+    public function pengurus()
+    {
+        return $this->hasOne(Pengurus::class, 'user_id');
+    }
 }
