@@ -24,6 +24,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        parent::boot();
+
+        // Route::domain('master-finance.localhost')
+        //     ->group(base_path('routes/web-finance.php'));
+
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });

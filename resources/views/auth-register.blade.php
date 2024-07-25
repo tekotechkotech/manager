@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="col-md-8 col-lg-6 col-xxl-3">
 <div class="card mb-0">
   <div class="card-body">
     <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
@@ -48,7 +49,8 @@
           <a class="text-primary fw-bold ms-2" href="{{ route('login') }}">Log In</a>
       </div>
   </form>
-  </div>
 </div>
-
+</div>
+</div>
+  
 @endsection

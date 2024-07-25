@@ -19,9 +19,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
 
-    protected $table = 'user'; // Menetapkan nama tabel
-    
-     protected $primaryKey = 'id_user';
+     protected $table = 'user'; // Pastikan ini sesuai dengan nama tabel di database
+    // protected $table = 'user';
+    protected $primaryKey = 'id_user';
     protected $fillable = [
         'name',
         'name',

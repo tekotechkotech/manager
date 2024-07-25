@@ -54,20 +54,22 @@ class AuthController extends Controller
     public function registerAct(Request $request)
     {
 
+        
+
         // dd($request);
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:user',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $user = new User([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        $user->save();
+        // $user->save();
 
         Auth::login($user);
 
@@ -87,6 +89,10 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->route('home');
         }
+        // dd($credentials);
+        // if (Hash::check($password, $credentials->password)) {
+        //     Auth::login($user);
+        // }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
@@ -97,5 +103,11 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect()->route('login');
+    }
+
+    public function index() {
+        // dd('asd');
+        
+        return view('auth-menu');
     }
 }
