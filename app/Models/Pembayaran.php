@@ -10,6 +10,7 @@ class Pembayaran extends Model
 {
     use HasFactory, HasUuids;
 
+    protected $table = 'pembayaran'; // Menetapkan nama tabel
     protected $primaryKey = 'id_pembayaran';
     protected $keyType = 'string';
     public $incrementing = false;

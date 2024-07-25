@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class PengurusJabatan extends Model
 {
     use HasFactory;
+    
+    protected $table = 'pengurus_jabatan'; // Menetapkan nama tabel
 }

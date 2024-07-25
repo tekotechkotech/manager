@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('peserta_didik', function (Blueprint $table) {
             $table->uuid('id_peserta_didik')->primary();
             $table->uuid('user_id');
+            $table->uuid('cabang_id');
             $table->string('nama', 100);
             $table->string('nis', 20)->unique();
             $table->date('tanggal_lahir');
@@ -22,6 +23,7 @@ return new class extends Migration
 
             // Foreign key constraint
             $table->foreign('user_id')->references('id_user')->on('user')->onDelete('cascade');
+            $table->foreign('cabang_id')->references('id_instasi_cabang')->on('instasi_cabang')->onDelete('cascade');
         });
     }
 

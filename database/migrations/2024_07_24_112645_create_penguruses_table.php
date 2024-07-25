@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id_pengurus')->primary();
             $table->uuid('user_id');
             $table->uuid('jabatan_id');
+            $table->uuid('cabang_id');
             // $table->date('tanggal_mulai');
             // $table->date('tanggal_selesai')->nullable();
             $table->text('keterangan')->nullable();
@@ -24,6 +25,7 @@ return new class extends Migration
             // Foreign key constraint
             $table->foreign('user_id')->references('id_user')->on('user')->onDelete('cascade');
             $table->foreign('jabatan_id')->references('id_pengurus_jabatan')->on('pengurus_jabatan')->onDelete('cascade');
+            $table->foreign('cabang_id')->references('id_instansi_cabang')->on('instansi_cabang')->onDelete('cascade');
         
         });
     }

@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Biaya extends Model
 {
     use HasFactory, HasUuids;
+    
+    protected $table = 'biaya'; // Menetapkan nama tabel
 
     protected $primaryKey = 'id_biaya';
     protected $keyType = 'string';

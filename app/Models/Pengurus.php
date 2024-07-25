@@ -10,6 +10,7 @@ class Pengurus extends Model
 {
     use HasFactory, HasUuids;
 
+    protected $table = 'pengurus'; // Menetapkan nama tabel
     protected $primaryKey = 'id_pengurus';
     protected $keyType = 'string';
     public $incrementing = false;

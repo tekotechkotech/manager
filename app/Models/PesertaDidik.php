@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class PesertaDidik extends Model
 {
     use HasFactory, HasUuids;
+    protected $table = 'peserta_didik'; // Menetapkan nama tabel
 
     protected $primaryKey = 'id_peserta_didik';
     protected $keyType = 'string';

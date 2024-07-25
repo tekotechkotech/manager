@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class PembayaranDetail extends Model
 {
     use HasFactory;
+    
+    protected $table = 'pembayaran_detail'; // Menetapkan nama tabel
 }

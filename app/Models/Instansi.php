@@ -10,6 +10,7 @@ class Instansi extends Model
 {
     use HasFactory, HasUuids;
 
+    protected $table = 'instansi'; // Menetapkan nama tabel
     protected $primaryKey = 'id_instansi';
     protected $keyType = 'string';
     public $incrementing = false;

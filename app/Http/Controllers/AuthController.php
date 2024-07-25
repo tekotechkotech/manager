@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
@@ -37,6 +38,7 @@ class AuthController extends Controller
         }
 
         return User::create([
+            'id_user' => Str::uuid()->toString(),
             'name' => $socialUser->name,
             'email' => $socialUser->email,
             // 'password' => bcrypt(str_random(16)), // Buat password acak
