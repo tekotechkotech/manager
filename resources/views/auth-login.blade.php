@@ -9,7 +9,7 @@
         <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
       </a>
       <p class="text-center">Your Social Campaigns</p>
-      <form method="POST" action="{{ route('login') }}">
+      <form method="POST" action="/login">
           @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>

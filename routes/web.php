@@ -16,20 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['domain' => 'master-finance.localhost'], function () {
-    // dd('sini');
-    // Route::get('/', function () {
-    //     return 'subdomain';
-    //     // return view('welcome');
-    // });
+// Route::group(['domain' => 'master-finance.localhost'], function () {
+//     // dd('sini');
+//     // Route::get('/', function () {
+//     //     return 'subdomain';
+//     //     // return view('welcome');
+//     // });
 
-    // dd(Auth::user()->name);
-    Route::get('/', [UserController::class, 'index'])->name('home-finance');
-});
-
-// Route::get('/', function () {
-//     return view('welcome');
+//     // dd(Auth::user()->name);
+//     Route::get('/', [UserController::class, 'index'])->name('home-finance');
 // });
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/home', function () {
     // dd(Auth::user()->name);
